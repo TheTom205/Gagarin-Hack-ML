@@ -22,7 +22,7 @@ generator = pipeline("text2text-generation", model="sberbank-ai/ruT5-base")
 
 tokenizer = AutoTokenizer.from_pretrained('uaritm/multilingual_en_uk_pl_ru')
 model = AutoModel.from_pretrained('uaritm/multilingual_en_uk_pl_ru')
-df=pd.read_csv('/home/thetom205/MISIS-gagarin/2024-04-13 Gagarin Hack Profiles (4).csv')
+df=pd.read_csv('~/MISIS-gagarin/Gagarin_Hack_Profiles.csv')
 df_renamed=df.rename(columns={'Напишите о себе (ваш пол, чем увлекаетесь, на каком языке пишете код, в каких областях хотели бы развиваться, какие ваши сильные стороны)':'description','На какой IT курс ходите или хотели бы ходить? / ML':'ML','На какой IT курс ходите или хотели бы ходить? / Docker':'Docker','На какой IT курс ходите или хотели бы ходить? / Backend':'Backend','На какой IT курс ходите или хотели бы ходить? / Frontend':'Frontend','На какой IT курс ходите или хотели бы ходить? / Дизайн':'Дизайн','На какой IT курс ходите или хотели бы ходить? / Робототехника':'Робототехника','На какой IT курс ходите или хотели бы ходить? / Swift':'Swift','На какой IT курс ходите или хотели бы ходить? / Go':'Go'})
 names=['ML','Docker','Backend','Frontend','Дизайн','Робототехника','Swift','Go']
 for i in names:
@@ -63,7 +63,7 @@ def mean_pooling(model_output, attention_mask):
     sum_mask = torch.clamp(input_mask_expanded.sum(1), min=1e-9)
     return sum_embeddings / sum_mask
 
-embeddings=pd.read_csv('/home/thetom205/MISIS-gagarin/embeddings2.csv')
+embeddings=pd.read_csv('~/MISIS-gagarin/embeddings.csv')
 
 embeddings=embeddings.to_numpy()
 embeddings
