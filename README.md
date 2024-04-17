@@ -1,4 +1,4 @@
-https://github.com/TheTom205/Gagarin-Hack-ML/blob/master/model.png?raw=true
+https://github.com/TheTom205/Gagarin-Hack-ML/blob/master/model.png
 
 ## Установка
 
