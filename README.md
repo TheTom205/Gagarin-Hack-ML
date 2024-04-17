@@ -1,3 +1,5 @@
+https://github.com/TheTom205/Gagarin-Hack-ML/blob/master/model.png?raw=true
+
 ## Установка
 
 `pip install -r requirements.txt`
