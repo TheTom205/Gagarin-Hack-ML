@@ -24,3 +24,5 @@ Team Members:
 `uvicorn main:app --reload`
 
 Сервис запустится на 8000 порту
+
+## Протестировать сервис http://gagarin.foowe.ru/
